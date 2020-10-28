@@ -24,6 +24,11 @@
 
 
 /* search location styles */
+
+.search-header {
+    font-family: "Open Sans";
+}
+
 .search-area {
     width: 70%;
 }
