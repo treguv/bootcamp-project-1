@@ -21,3 +21,18 @@
     justify-content: center;
 }
 /* end of hero styles */
+
+
+/* search location styles */
+.search-area {
+    width: 70%;
+}
+
+.input-bar {
+    text-align: center;
+}
+
+.button-size {
+    height: 3rem;
+}
+/* end of search location styles */
