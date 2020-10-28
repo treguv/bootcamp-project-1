@@ -1,3 +1,4 @@
+/* hero styles */
 .header-font {
     font-family: "Nunito";
     font-size: 3rem;
@@ -19,3 +20,4 @@
     display: flex;
     justify-content: center;
 }
+/* end of hero styles */
