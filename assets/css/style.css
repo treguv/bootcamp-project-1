@@ -1,0 +1,19 @@
+.header-font {
+    font-family: "Nunito";
+    font-size: 3rem;
+}
+
+.subtitle-font {
+    font-family: "Nunito";
+    font-style: italic;
+}
+
+
+.hero-image {
+    background-image: url("../images/kite-hero.jpg");
+    background-size: cover;
+    background-position: 80%;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+}
