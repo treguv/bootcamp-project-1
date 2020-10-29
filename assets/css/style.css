@@ -1,23 +1,36 @@
 /* hero styles */
 .header-font {
-    font-family: "Nunito";
-    font-size: 3rem;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+  font-family: "Nunito";
+  font-size: 3rem;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
 }
 
 .subtitle-font {
-    font-family: "Nunito";
-    font-style: italic;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+  font-family: "Nunito";
+  font-style: italic;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
 }
-
 
 .hero-image {
-    background-image: url("../images/kite-hero.jpg");
-    background-size: cover;
-    background-position: 80%;
-    background-attachment: fixed;
-    display: flex;
-    justify-content: center;
+  background-image: url("../images/kite-hero.jpg");
+  background-size: cover;
+  background-position: 80%;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
 }
 /* end of hero styles */
+
+/* Map Style */
+#mapContainer {
+  width: 400px; /* Figure out how to change the size*/
+  height: 300px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 100px;
+}
+
+#map-text {
+  text-align: center;
+  justify-content: center;
+}
