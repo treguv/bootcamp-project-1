@@ -32,6 +32,7 @@ function mapClickHandler(event) {
   clickMarker = new mapboxgl.Marker()
     .setLngLat([mouseLngLat.lng, mouseLngLat.lat])
     .addTo(map);
+  windFetch(mouseLngLat);
 }
 function searchClickHandler(event) {
   event.preventDefault();
