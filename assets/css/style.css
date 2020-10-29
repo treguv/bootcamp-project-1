@@ -45,3 +45,11 @@
   border-color: rgba(47, 108, 241, 0.63);
   font-family: "Nunito";
 }
+
+.grow:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+
