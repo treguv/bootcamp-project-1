@@ -23,8 +23,8 @@
 
 /* Map Style */
 #mapContainer {
-  width: 400px; /* Figure out how to change the size*/
-  height: 300px;
+  width: 80%; /* Figure out how to change the size*/
+  height: 500px;
   margin: auto;
   margin-top: 10px;
   margin-bottom: 100px;
@@ -33,4 +33,7 @@
 #map-text {
   text-align: center;
   justify-content: center;
+}
+#map {
+  width: 100%;
 }
