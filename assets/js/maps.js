@@ -33,6 +33,18 @@ function mapClickHandler(event) {
     .setLngLat([mouseLngLat.lng, mouseLngLat.lat])
     .addTo(map);
 }
-
+function searchClickHandler(event) {
+  event.preventDefault();
+  mapEl.textContent =
+    "Add the weather data here for (" +
+    mouseLngLat.lng +
+    ", " +
+    mouseLngLat.lng +
+    ")";
+  //Add weather data Here and go on with this
+}
 mapEl = document.getElementById("mapContainer");
 mapEl.addEventListener("click", mapClickHandler);
+// Add listener to button
+searchButtonEl = document.getElementById("search-button");
+searchButtonEl.addEventListener("click", searchClickHandler);

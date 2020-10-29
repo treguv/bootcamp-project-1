@@ -37,3 +37,7 @@
 #map {
   width: 100%;
 }
+/* Should be centered under the map */
+#search-button {
+  margin: auto;
+}
