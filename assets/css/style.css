@@ -23,21 +23,25 @@
 
 /* Map Style */
 #mapContainer {
-  width: 80%; /* Figure out how to change the size*/
+  width: 60%; /* Figure out how to change the size*/
   height: 500px;
   margin: auto;
-  margin-top: 10px;
-  margin-bottom: 100px;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
 }
 
 #map-text {
   text-align: center;
   justify-content: center;
 }
-#map {
-  width: 100%;
+
+.map-tweaks {
 }
+
+
 /* Should be centered under the map */
-#search-button {
-  margin: auto;
+ #search-button {
+  background-color: rgba(63, 172, 245, 0.479);
+  border-color: rgba(47, 108, 241, 0.63);
+  font-family: "Nunito";
 }
