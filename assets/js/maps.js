@@ -26,7 +26,7 @@ map.on("mousemove", function (e) {
 });
 var clickMarker = new mapboxgl.Marker().setLngLat([0, 0]);
 function mapClickHandler(event) {
-  console.log(mouseLngLat);
+  // console.log(mouseLngLat);
   clickMarker.remove();
   //Now we know what the current clicks lng and lat are and we make a new marker
   clickMarker = new mapboxgl.Marker()
