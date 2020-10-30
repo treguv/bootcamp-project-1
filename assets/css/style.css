@@ -21,6 +21,7 @@
 }
 /* end of hero styles */
 
+
 /* Map Style */
 #mapContainer {
   max-width: 60%;
@@ -36,9 +37,7 @@
 }
 
 
-
-
-/* Should be centered under the map */
+/* button should be centered under the map */
  #search-button {
   background-color: rgba(63, 172, 245, 0.479);
   border-color: rgba(47, 108, 241, 0.63);
@@ -52,18 +51,27 @@
   transition-duration: 500ms;
 }
 
+
+/* weather data */
 .location-background {
   width: 50%;
-  font-size: 2rem;
+  font-size: 30px;
   font-family: "Nunito";
   background-color: rgba(148, 147, 147, 0.13);
-  padding: 2rem;
+  padding: 10px;
   border-radius: 5px;
+  border-style: double;
+}
+
+.location-header {
+  font-size: 40px;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 50px;
 }
 
 
 /* media queries */
-
 @media screen and (max-width: 768px) {
   #mapContainer {
     max-width: 80%;
@@ -76,5 +84,9 @@
   .location-background {
     font-size: 25px;
     width: 70%;
+  }
+
+  .location-header {
+    font-size: 30px;
   }
 }
