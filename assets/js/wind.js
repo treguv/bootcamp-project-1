@@ -1,5 +1,3 @@
-
-
 function windFetch(location) {
   var lon = location.lng;
   var lat = location.lat;
