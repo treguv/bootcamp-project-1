@@ -19,9 +19,9 @@ map.addControl(
 var mouseLngLat;
 map.on("mousemove", function (e) {
   // e.lngLat is the longitude, latitude geographical position of the event
-  document.getElementById("map-text").textContent = JSON.stringify(
-    e.lngLat.wrap()
-  );
+  // document.getElementById("map-text").textContent = JSON.stringify(
+  //   e.lngLat.wrap()
+  // );
   mouseLngLat = e.lngLat;
 });
 var clickMarker = new mapboxgl.Marker().setLngLat([0, 0]);
