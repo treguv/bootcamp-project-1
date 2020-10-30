@@ -58,7 +58,6 @@
   font-size: 30px;
   font-family: "Nunito";
   background-color: rgba(148, 147, 147, 0.13);
-  padding: 10px;
   border-radius: 5px;
   border-style: double;
 }
@@ -66,7 +65,7 @@
 .location-header {
   font-size: 40px;
   font-weight: bold;
-  padding-top: 10px;
+  padding-top: 15px;
   padding-bottom: 50px;
 }
 
@@ -82,11 +81,12 @@
   }
 
   .location-background {
-    font-size: 25px;
-    width: 70%;
+    font-size: 30px;
+    width: 80%;
   }
 
   .location-header {
     font-size: 30px;
   }
+
 }
