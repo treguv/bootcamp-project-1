@@ -23,7 +23,7 @@
 
 /* Map Style */
 #mapContainer {
-  width: 60%; /* Figure out how to change the size*/
+  max-width: 60%;
   height: 500px;
   margin: auto;
   margin-top: 2rem;
@@ -54,3 +54,14 @@
 }
 
 
+/* media queries */
+
+@media screen and (max-width: 768px) {
+  #mapContainer {
+    max-width: 80%;
+  }
+
+  .mobile-text {
+    font-size: 2rem;
+  }
+}
