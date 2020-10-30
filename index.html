@@ -1,61 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+    />
+    <!-- bulma stylesheet -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <!-- custom google fonts -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Fly High</title>
+    <!-- Loading in maps -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <!-- More Map Loads -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
+    <!-- Promise polyfill script required to use Mapbox GL Geocoder in IE 11 -->
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
-  <!-- bulma stylesheet -->
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&display=swap" rel="stylesheet" />
-  <!-- custom google fonts -->
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <title>Fly High</title>
-  <!-- Loading in maps -->
-  <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
-  <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
-  <!-- More Map Loads -->
-  <script
-    src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
-  <!-- Promise polyfill script required to use Mapbox GL Geocoder in IE 11 -->
-  <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
-</head>
-
-<body>
-  <!-- hero section -->
-  <section class="hero hero-image is-large">
-    <div class="hero-body">
-      <div class="container">
-        <h1 class="title has-text-white has-text-right header-font">
-          Fly High
-        </h1>
-        <h2 class="subtitle has-text-white has-text-right subtitle-font">
-          Find the perfect spot to take flight
-        </h2>
+  <body>
+    <!-- hero section -->
+    <section class="hero hero-image is-large">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title has-text-white has-text-right header-font">
+            Fly High
+          </h1>
+          <h2 class="subtitle has-text-white has-text-right subtitle-font">
+            Find the perfect spot to take flight
+          </h2>
+        </div>
       </div>
-    </div>
-  </section>
-  <!-- end of hero section -->
-  <!-- Testing the map -->
-  <!-- Basic Text -->
-  <section class="section has-text-centered">
-    <h2 class="subtitle has-text-black subtitle-font mt-5" id="map-text">
-      Pick Your Location
-    </h2>
-    <div class="map-tweaks">
-      <div id="mapContainer"></div>
-    </div>
-    <!-- Add button to search using the data -->
-    <button class="button is-medium is-outlined mt-0 grow" id="search-button">Let's Fly!</button>
-  </section>
+    </section>
+    <!-- end of hero section -->
+    <!-- Testing the map -->
+    <!-- Basic Text -->
+    <section class="section has-text-centered">
+      <h2 class="subtitle has-text-black subtitle-font mt-5" id="map-text">
+        Pick Your Location
+      </h2>
+      <div class="map-tweaks">
+        <div id="mapContainer"></div>
+      </div>
+      <!-- Add button to search using the data -->
+      <button class="button is-medium is-outlined mt-0 grow" id="search-button">
+        Let's Fly!
+      </button>
+    </section>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="assets/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/script.js"></script>
 
-  <!-- Map Apis -->
-  <script src="assets/js/wind.js"></script>
-  <script src="assets/js/mapsApiKey.js"></script>
-  <script src="assets/js/maps.js"></script>
-</body>
-
+    <!-- Map Apis -->
+    <script src="assets/js/wind.js"></script>
+    <script src="assets/js/mapsApiKey.js"></script>
+    <script src="assets/js/maps.js"></script>
+  </body>
 </html>
