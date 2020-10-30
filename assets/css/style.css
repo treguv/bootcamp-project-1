@@ -53,6 +53,15 @@
   transition-duration: 500ms;
 }
 
+.location-background {
+  width: 50%;
+  font-size: 2rem;
+  font-family: "Nunito";
+  background-color: rgba(148, 147, 147, 0.13);
+  padding: 2rem;
+  border-radius: 5px;
+}
+
 
 /* media queries */
 
@@ -63,5 +72,10 @@
  
   .mobile-text {
     font-size: 2rem;
+  }
+
+  .location-background {
+    font-size: 25px;
+    width: 70%;
   }
 }
