@@ -75,7 +75,7 @@
 
 
 /* button should be centered under the map */
- #search-button {
+ .button-styles {
   background-color: rgba(63, 172, 245, 0.479);
   border-color: rgba(47, 108, 241, 0.63);
   font-family: "Nunito";
