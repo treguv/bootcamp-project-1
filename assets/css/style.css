@@ -24,7 +24,7 @@
 
 /* Map Style */
 #mapContainer {
-  max-width: 60%;
+  max-width: 100%;
   height: 500px;
   margin: auto;
   margin-top: 2rem;
@@ -89,4 +89,7 @@
     font-size: 30px;
   }
 
+  .is-3 {
+    display: none;
+  }
 }

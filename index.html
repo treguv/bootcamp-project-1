@@ -43,20 +43,33 @@
       </div>
     </section>
     <!-- end of hero section -->
+
     <!-- Testing the map -->
-    <!-- Basic Text -->
-    <section class="section has-text-centered">
-      <h2 class="subtitle has-text-black subtitle-font mt-5 mobile-text" id="map-text">
+    <!-- recent searches, map, and favorites -->
+    <section class = "section has-text-centered">
+      <div class = "columns">
+      <div class = "column is-3">
+        <h2 class = "subtitle has-text-black subtitle-font mt-5 mobile-text">
+          Recent Searches</h2>
+      </div>
+      <div class = "column is-6">
+      <h2 class = "subtitle has-text-black subtitle-font mt-5 mobile-text" id="map-text">
         Pick Your Location
       </h2>
-      <div class="map-tweaks">
-        <div id="mapContainer"></div>
+        <div id = "mapContainer"></div>
       </div>
+      <div class = "column is-3">
+        <h2 class = "subtitle has-text-black subtitle-font mt-5 mobile-text">
+          Favorites</h2>
+      </div>
+      </div>
+
       <!-- Add button to search using the data -->
-      <button class="button is-medium is-outlined mt-0 grow" id="search-button">
+      <button class = "button is-medium is-outlined mt-0 grow" id="search-button">
         Let's Fly!
       </button>
     </section>
+
     <!-- weather data -->
     <div class = "container has-text-centered location-background mobile-text">
       <h2 class = "location-header">Location Status:</h2>
@@ -71,14 +84,6 @@
           <h3 class = "p-4">UV:</h3>
           </div>
       </div>
-
-      <!-- <div class = "level is-mobile">
-      <h3 class = "p-4">Temp:</h3>
-      <h3 class = "p-4">Wind Speed:</h3>
-      <h3 class = "p-4">Rain:</h3>
-      <h3 class = "p-4">UV:</h3>
-      </div> -->
-
     <!-- end of weather data-->
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
