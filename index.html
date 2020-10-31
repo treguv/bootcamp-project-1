@@ -56,13 +56,53 @@
       <button class="button is-medium is-outlined mt-0 grow" id="search-button">
         Let's Fly!
       </button>
+      <button
+        class="button is-medium is-outlined mt-0 grow"
+        id="favorite-button"
+      >
+        Add To Favorites
+      </button>
+      <button class="button is-medium is-outlined mt-0" id="load-button">
+        Load Favorites
+      </button>
+      <form>
+        <div class="field">
+          <div class="control">
+            <input type="textarea" id="place-name" />
+          </div>
+        </div>
+      </form>
     </section>
+    <!-- Test list for favorites  -->
+    <div class="container">
+      <div class="columns is-mobile is-centered">
+        <div class="column is-5">
+          <div class="list">
+            <ul>
+              <div class="list-item" id="item-1">
+                <li>Placeholder text</li>
+              </div>
+              <div class="list-item" id="item-2">
+                <li>Placeholder text</li>
+              </div>
+              <div class="list-item" id="item-3">
+                <li>Placeholder text</li>
+              </div>
+              <div class="list-item" id="item-4">
+                <li>Placeholder text</li>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="assets/js/script.js"></script>
 
     <!-- Map Apis -->
     <script src="assets/js/wind.js"></script>
+    <script src="assets/js/favorites.js"></script>
     <script src="assets/js/mapsApiKey.js"></script>
     <script src="assets/js/maps.js"></script>
   </body>
