@@ -130,3 +130,30 @@
     display: none;
   }
 }
+
+
+@media screen and (max-width: 980px) {
+  #mapContainer {
+    width: 100%;
+  }
+
+  .location-background {
+    font-size: 30px;
+    width: 80%;
+  }
+
+  .is-3 {
+    display: none;
+  }
+
+  .is-mobile-10 {
+    width: 80% !important;
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .is-3 {
+    display: none;
+  }
+}
