@@ -87,8 +87,9 @@ function removeFavorite(theItemNum) {
   theItemNum = Number(theItemNum);
   // we are going to remove that item. And shift all items below it up by one
   favorites[theItemNum - 1] = null;
-  for (var i = theItemNum - 1; i < favorites.length; i++) {
-    favorites[i - 1] = favorites[i];
+  for (var i = favorites.length - 1; i > theItemNum; i--) {
+    console.log("replacing", i, i - 1);
+    favorites[i] = favorites[i - 1];
   }
   saveFavorites();
 }
