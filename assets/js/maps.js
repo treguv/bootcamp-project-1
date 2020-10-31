@@ -51,3 +51,6 @@ mapEl.addEventListener("click", mapClickHandler);
 // Add listener to button
 searchButtonEl = document.getElementById("search-button");
 searchButtonEl.addEventListener("click", searchClickHandler);
+
+//load the favorites back onto the map
+loadFavoritesOntoMap();

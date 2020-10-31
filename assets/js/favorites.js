@@ -19,6 +19,7 @@ function addFavorite(theLocation, theName) {
   favorites[0] = fav;
   //Call method to update the display
   displayFavorites();
+  saveFavorites();
 }
 //displays the favorites in the appropriate fields
 function displayFavorites() {
@@ -39,6 +40,10 @@ $("#favorite-button").on("click", function () {
 
 //load in the map points from favorites
 $("#load-button").on("click", function () {
+  loadFavoritesOntoMap();
+});
+
+function loadFavoritesOntoMap() {
   for (var i = 0; i < 4; i++) {
     //Loop Through favorites menu
     if (favorites[i] != null) {
@@ -48,7 +53,7 @@ $("#load-button").on("click", function () {
         .addTo(map);
     }
   }
-});
+}
 //Detect when somthign from the favorites list is clicked
 $("#favorite-item-group").on("click", ".list-item", function () {
   //Get the favorites item that was clicked
@@ -70,3 +75,32 @@ $("#favorite-item-group").on("click", ".list-item", function () {
     curve: 1,
   });
 });
+
+// Handle the storing into local
+
+function loadFavorites() {
+  //Load in the array from localstorage
+  if (localStorage.getItem("favorites") !== null) {
+    favorites = JSON.parse(localStorage.getItem("favorites"));
+  } else {
+    saveFavorites();
+  }
+  for (var i = 1; i <= 4; i++) {
+    var theCurrentSelection = "#item-" + i;
+    console.log($(theCurrentSelection));
+    if (favorites[i - 1] != null) {
+      $(theCurrentSelection).text(favorites[i - 1].name);
+    } else {
+      $(theCurrentSelection).text("");
+    }
+  }
+}
+
+function saveFavorites() {
+  // Convert the array into a json string
+  var theJsonFavorites = JSON.stringify(favorites);
+  localStorage.setItem("favorites", theJsonFavorites);
+  loadFavorites();
+}
+
+loadFavorites();
