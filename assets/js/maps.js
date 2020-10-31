@@ -2,6 +2,8 @@ mapboxgl.accessToken = apiKey;
 var map = new mapboxgl.Map({
   container: "mapContainer",
   style: "mapbox://styles/mapbox/streets-v11",
+  center: [-122.335167, 47.608013], //Can be changed to users location
+  zoom: 10,
 });
 
 // Add search bar / geocoder

@@ -40,10 +40,33 @@ $("#favorite-button").on("click", function () {
 //load in the map points from favorites
 $("#load-button").on("click", function () {
   for (var i = 0; i < 4; i++) {
+    //Loop Through favorites menu
     if (favorites[i] != null) {
+      //Make and place markers from favorites menu
       var currentMarker = new mapboxgl.Marker()
         .setLngLat([favorites[i].lng, favorites[i].lat])
         .addTo(map);
     }
   }
+});
+//Detect when somthign from the favorites list is clicked
+$("#favorite-item-group").on("click", ".list-item", function () {
+  //Get the favorites item that was clicked
+  var theClickedId = $(this).attr("id").replace("item-", "");
+  //Select the object from array
+  var theClickedItem = favorites[Number(theClickedId) - 1];
+  //Make marker and center around it on the map.
+  // The make marker will need to be removed when we have all markeres loadef from local storage
+  var currentMarker = new mapboxgl.Marker()
+    .setLngLat([theClickedItem.lng, theClickedItem.lat])
+    .addTo(map);
+
+  //fly to that location on the map
+  map.flyTo({
+    // this flyto needs to be fine tuned to what we like
+    center: [theClickedItem.lng, theClickedItem.lat],
+    zoom: 15,
+    speed: 0.5,
+    curve: 1,
+  });
 });
