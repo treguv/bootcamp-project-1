@@ -21,13 +21,17 @@
 }
 /* end of hero styles */
 
+
 /* Map Style */
 #mapContainer {
-  width: 60%; /* Figure out how to change the size*/
+  max-width: 100%;
   height: 500px;
   margin: auto;
   margin-top: 2rem;
   margin-bottom: 3rem;
+  border-style: double;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px  rgba(0, 0, 0, 0.5);
 }
 
 #map-text {
@@ -35,11 +39,42 @@
   justify-content: center;
 }
 
-.map-tweaks {
+.main-header {
+  font-family: "Nunito";
+  font-size: 40px;
+  font-style: italic;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.section-headers {
+  font-family: "Nunito";
+  font-size: 30px;
+  font-style: italic;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+/* list styles (recent searches and favorites) */
+.group-list {
+  margin: 1rem 4rem;
+  width: 20rem;
+}
+
+.list-item {
+  height: 3rem;
+  position: relative;
+  display: block; 
+  padding: .75rem 1.25rem;
+  margin-bottom: -1px;
+  background-color: rgb(240, 240, 240);
+  border: 1px solid rgba(0, 0, 0, 0.74);
+  border-radius: 2px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
 }
 
 
-/* Should be centered under the map */
+/* button should be centered under the map */
  #search-button {
   background-color: rgba(63, 172, 245, 0.479);
   border-color: rgba(47, 108, 241, 0.63);
@@ -54,3 +89,44 @@
 }
 
 
+/* weather data */
+.location-background {
+  width: 50%;
+  font-size: 30px;
+  font-family: "Nunito";
+  background-color: rgba(148, 147, 147, 0.13);
+  border-radius: 5px;
+  border-style: double;
+}
+
+.location-header {
+  font-size: 40px;
+  font-weight: bold;
+  padding-top: 15px;
+  padding-bottom: 50px;
+}
+
+
+/* media queries */
+@media screen and (max-width: 768px) {
+  #mapContainer {
+    max-width: 80%;
+  }
+ 
+  .mobile-text {
+    font-size: 2rem;
+  }
+
+  .location-background {
+    font-size: 30px;
+    width: 80%;
+  }
+
+  .location-header {
+    font-size: 30px;
+  }
+
+  .is-3 {
+    display: none;
+  }
+}

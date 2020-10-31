@@ -43,40 +43,59 @@
       </div>
     </section>
     <!-- end of hero section -->
+
     <!-- Testing the map -->
-    <!-- Basic Text -->
-    <section class="section has-text-centered">
-      <h2 class="subtitle has-text-black subtitle-font mt-5" id="map-text">
-        Pick Your Location
-      </h2>
-      <div class="map-tweaks">
-        <div id="mapContainer"></div>
-        <!-- Test list for favorites  -->
-        <div class="container">
-          <div class="columns is-mobile is-centered">
-            <div class="column is-5">
-              <div class="list">
-                <ul id="favorite-item-group">
-                  <div class="list-item" id="item-1">
-                    <li>Placeholder text</li>
-                  </div>
-                  <div class="list-item" id="item-2">
-                    <li>Placeholder text</li>
-                  </div>
-                  <div class="list-item" id="item-3">
-                    <li>Placeholder text</li>
-                  </div>
-                  <div class="list-item" id="item-4">
-                    <li>Placeholder text</li>
-                  </div>
-                </ul>
-              </div>
-            </div>
+    <!-- recent searches, map, and favorites -->
+    <section class = "section has-text-centered">
+      <div class = "columns">
+      <div class = "column is-3">
+        <h2 class = "subtitle has-text-black section-headers mt-6 mobile-text">
+          Recent Searches
+        </h2>
+        <div>
+          <div class = "group-list">
+            <a href = "#" class = "list-item"></a>
+            <a href = "#" class = "list-item"></a>
+            <a href = "#" class = "list-item"></a>
+            <a href = "#" class = "list-item"></a>
+            <a href = "#" class = "list-item"></a>
+            <a href = "#" class = "list-item"></a>
+            <a href = "#" class = "list-item"></a>
+            <a href = "#" class = "list-item"></a>
+            <a href = "#" class = "list-item"></a>
+            <a href = "#" class = "list-item"></a>
           </div>
         </div>
       </div>
+      <div class = "column is-6">
+      <h2 class = "subtitle has-text-black main-header mt-5 mobile-text" id="map-text">
+        Pick Your Location
+      </h2>
+        <div id = "mapContainer"></div>
+      </div>
+      <div class = "column is-3">
+        <h2 class = "subtitle has-text-black section-headers mt-6 mobile-text">
+          Favorites
+        </h2>
+        <div>
+          <div class = "group-list">
+            <a href = "#" class = "list-item"></a>
+            <a href = "#" class = "list-item"></a>
+            <a href = "#" class = "list-item"></a>
+            <a href = "#" class = "list-item"></a>
+            <a href = "#" class = "list-item"></a>
+            <a href = "#" class = "list-item"></a>
+            <a href = "#" class = "list-item"></a>
+            <a href = "#" class = "list-item"></a>
+            <a href = "#" class = "list-item"></a>
+            <a href = "#" class = "list-item"></a>
+          </div>
+        </div>
+      </div>
+      </div>
+
       <!-- Add button to search using the data -->
-      <button class="button is-medium is-outlined mt-0 grow" id="search-button">
+      <button class = "button is-medium is-outlined mt-0 grow" id="search-button">
         Let's Fly!
       </button>
       <button
@@ -99,6 +118,22 @@
         </div>
       </form>
     </section>
+
+    <!-- weather data -->
+    <div class = "container has-text-centered location-background mobile-text">
+      <h2 class = "location-header">Location Status:</h2>
+      <!-- insert rating -->
+      <div class = columns>
+        <div class = "column">
+          <h3 class = "p-4">Temperature:</h3>
+          <h3 class = "p-4">Wind Speed:</h3>
+        </div>
+        <div class = "column">
+          <h3 class = "p-4">Rain:</h3>
+          <h3 class = "p-4">UV:</h3>
+          </div>
+      </div>
+    <!-- end of weather data-->
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="assets/js/script.js"></script>
