@@ -68,6 +68,9 @@
   background-color: rgb(240, 240, 240);
   border: 1px solid rgba(0, 0, 0, 0.74);
   border-radius: 2px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
 }
 
 
