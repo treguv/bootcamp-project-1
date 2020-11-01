@@ -88,6 +88,11 @@
   transition-duration: 500ms;
 }
 
+.input-field {
+  width: 20%;
+  border-color: black;
+}
+
 
 /* weather data */
 .location-background {
@@ -128,5 +133,63 @@
 
   .is-3 {
     display: none;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  #mapContainer {
+    width: 100%;
+  }
+
+  .location-background {
+    font-size: 30px;
+    width: 80%;
+  }
+
+  .is-3 {
+    display: none;
+  }
+
+  .is-mobile-10 {
+    width: 80% !important;
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .hero-image {
+    height: 10rem;
+  }
+
+  .is-mobile-10 {
+    width: 80% !important;
+  }
+
+  .is-3 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .hero-image {
+    height: 12rem;
+  }
+
+  .is-mobile-10 {
+    width: 80% !important;
+  }
+
+  .is-3 {
+    display: none;
+  }
+
+  .location-background {
+    font-size: 30px;
+    width: 70%;
+  }
+
+  .input-field {
+    width: 30%;
+    border-color: black;
   }
 }
