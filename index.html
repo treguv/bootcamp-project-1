@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+    />
+    <!-- bulma stylesheet -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <!-- custom google fonts -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Fly High</title>
+    <!-- Loading in maps -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <!-- More Map Loads -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
+    <!-- Promise polyfill script required to use Mapbox GL Geocoder in IE 11 -->
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+  </head>
+
+  <body>
+    <!-- hero section -->
+    <section class="hero hero-image is-large">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title has-text-white has-text-right header-font">
+            Fly High
+          </h1>
+          <h2 class="subtitle has-text-white has-text-right subtitle-font">
+            Find the perfect spot to take flight
+          </h2>
+        </div>
+      </div>
+    </section>
+    <!-- end of hero section -->
+
+    <!-- Testing the map -->
+    <!-- recent searches, map, and favorites -->
+    <section class = "section has-text-centered">
+      <div class = "columns">
+      <div class = "column is-3">
+        <h2 class = "subtitle has-text-black section-headers mt-6 mobile-text">
+          Recent Searches
+        </h2>
+        <div>
+          <div class = "group-list">
+            <a href = "#" class = "list-item"></a>
+            <a href = "#" class = "list-item"></a>
+            <a href = "#" class = "list-item"></a>
+            <a href = "#" class = "list-item"></a>
+            <a href = "#" class = "list-item"></a>
+            <a href = "#" class = "list-item"></a>
+            <a href = "#" class = "list-item"></a>
+            <a href = "#" class = "list-item"></a>
+            <a href = "#" class = "list-item"></a>
+            <a href = "#" class = "list-item"></a>
+          </div>
+        </div>
+      </div>
+      <div class = "column is-6">
+      <h2 class = "subtitle has-text-black main-header mt-5 mobile-text" id="map-text">
+        Pick Your Location
+      </h2>
+        <div id = "mapContainer"></div>
+      </div>
+      <div class = "column is-3">
+        <h2 class = "subtitle has-text-black section-headers mt-6 mobile-text">
+          Favorites
+        </h2>
+        <div>
+          <div class = "group-list">
+            <a href = "#" class = "list-item"></a>
+            <a href = "#" class = "list-item"></a>
+            <a href = "#" class = "list-item"></a>
+            <a href = "#" class = "list-item"></a>
+            <a href = "#" class = "list-item"></a>
+            <a href = "#" class = "list-item"></a>
+            <a href = "#" class = "list-item"></a>
+            <a href = "#" class = "list-item"></a>
+            <a href = "#" class = "list-item"></a>
+            <a href = "#" class = "list-item"></a>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- Add button to search using the data -->
+      <button class = "button is-medium is-outlined mt-0 grow" id="search-button">
+        Let's Fly!
+      </button>
+      <button
+        class="button is-medium is-outlined mt-0 grow"
+        id="favorite-button"
+      >
+        Add To Favorites
+      </button>
+      <button class="button is-medium is-outlined mt-0" id="load-button">
+        Load Favorites
+      </button>
+      <button class="button is-medium is-outlined mt-0" id="fill-button">
+        Fill Favorites
+      </button>
+      <form>
+        <div class="field">
+          <div class="control">
+            <input type="textarea" id="place-name" />
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <!-- weather data -->
+    <div class = "container has-text-centered location-background mobile-text">
+      <h2 class = "location-header">Location Status:</h2>
+      <!-- insert rating -->
+      <div class = columns>
+        <div class = "column">
+          <h3 class = "p-4">Temperature:</h3>
+          <h3 class = "p-4">Wind Speed:</h3>
+        </div>
+        <div class = "column">
+          <h3 class = "p-4">Rain:</h3>
+          <h3 class = "p-4">UV:</h3>
+          </div>
+      </div>
+    <!-- end of weather data-->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <!-- Map Apis -->
+    <script src="assets/js/wind.js"></script>
+    <script src="assets/js/favorites.js"></script>
+    <script src="assets/js/mapsApiKey.js"></script>
+    <script src="assets/js/maps.js"></script>
+  </body>
+</html>
