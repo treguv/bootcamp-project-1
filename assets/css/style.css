@@ -55,6 +55,11 @@
 
 /* list styles (recent searches and favorites) */
 .group-list {
+  margin: 1rem 3rem;
+  width: 20rem;
+}
+
+.recent-searches {
   margin: 1rem 4rem;
   width: 20rem;
 }
@@ -111,8 +116,26 @@
   padding-bottom: 50px;
 }
 
+/* modal styles */
+
+
+.list-item-modal {
+  height: 3rem;
+  width: 20rem;
+  display: block;
+  padding: .75rem 1.25rem;
+  margin-bottom: -1px;
+  background-color: rgba(245, 236, 236, 0.849);
+  border: 1px solid rgba(0, 0, 0, 0.74);
+  border-radius: 2px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+}
+
 
 /* media queries */
+/* requires modal */
 @media screen and (max-width: 768px) {
   #mapContainer {
     max-width: 80%;
@@ -134,8 +157,14 @@
   .is-3 {
     display: none;
   }
+
+  .group-list-modal {
+    margin-left: 30px;
+    width: 10rem;
+  }
 }
 
+/* requires modal */
 @media screen and (max-width: 980px) {
   #mapContainer {
     width: 100%;
@@ -153,9 +182,14 @@
   .is-mobile-10 {
     width: 80% !important;
   }
+
+  .group-list-modal {
+    margin-right: 30px;
+    width: 10rem;
+  }
 }
 
-
+/* requires modal */
 @media screen and (max-width: 1024px) {
   .hero-image {
     height: 10rem;
@@ -168,6 +202,11 @@
   .is-3 {
     display: none;
   }
+
+  .group-list-modal {
+    margin-right: 20px;
+    width: 10rem;
+  }
 }
 
 @media screen and (max-width: 1280px) {
@@ -176,11 +215,7 @@
   }
 
   .is-mobile-10 {
-    width: 80% !important;
-  }
-
-  .is-3 {
-    display: none;
+    width: 50%;
   }
 
   .location-background {
@@ -191,5 +226,10 @@
   .input-field {
     width: 30%;
     border-color: black;
+  }
+
+  .group-list {
+    margin: 1rem;
+    width: 15rem;
   }
 }
