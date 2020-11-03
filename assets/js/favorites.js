@@ -1,6 +1,6 @@
 "use strict";
 // make an arrray to hold all of the favorite
-var favorites = [null, null, null, null];
+var favorites = [null, null, null, null, null, null, null, null, null, null];
 
 // debug function fill all favorites
 $("#fill-button").on("click", function () {
@@ -27,6 +27,7 @@ function addFavorite(theLocation, theName) {
   //assign that object into favorites memory
   //this is a very inificient way of doing this. will be fixed with for loop
   favorites.unshift(fav);
+  console.log(favorites.length);
   favorites.splice(favorites.length - 1, 1);
 
   //Call method to update the display
@@ -35,7 +36,7 @@ function addFavorite(theLocation, theName) {
 }
 //displays the favorites in the appropriate fields
 function displayFavorites() {
-  for (var i = 1; i <= 4; i++) {
+  for (var i = 1; i <= favorites.length; i++) {
     var currentTarget = "#item-" + i;
     if (favorites[i - 1] != null) {
       $(currentTarget).text(favorites[i - 1].name);
@@ -56,7 +57,7 @@ $("#load-button").on("click", function () {
 });
 
 function loadFavoritesOntoMap() {
-  for (var i = 0; i < 4; i++) {
+  for (var i = 0; i < favorites.length; i++) {
     //Loop Through favorites menu
     if (favorites[i] != null) {
       //Make and place markers from favorites menu
@@ -67,7 +68,7 @@ function loadFavoritesOntoMap() {
   }
 }
 //Detect when somthign from the favorites list is clicked
-$("#favorite-item-group").on("click", ".list-item", function () {
+$("#favorites-list").on("click", ".list-item", function () {
   //Get the favorites item that was clicked
   var theClickedId = $(this).attr("id").replace("item-", "");
   //Select the object from array
@@ -98,7 +99,7 @@ function removeFavorite(theItemNum) {
 }
 
 // Detect rmb presses on the favorite items
-$("#favorite-item-group .list-item").mousedown(function (event) {
+$("#favorites-list .list-item").mousedown(function (event) {
   if (event.which === 3) {
     //console.log($(this).attr("id").replace("item-", ""));
     removeFavorite($(this).attr("id").replace("item-", ""));
@@ -114,7 +115,7 @@ function loadFavorites() {
     saveFavorites();
   }
   //load everything onto the page appropriatly
-  for (var i = 1; i <= 4; i++) {
+  for (var i = 1; i <= favorites.length; i++) {
     var theCurrentSelection = "#item-" + i;
     // console.log($(theCurrentSelection));
     if (favorites[i - 1] != null) {
