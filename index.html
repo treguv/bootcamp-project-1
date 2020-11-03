@@ -119,8 +119,8 @@
           </div>
         </div>
       </form>
-      <button class="button is-medium m-3 grow icon-buttons"><i class="fas fa-history"></i></button>
-      <button class="button is-medium m-3 grow icon-buttons"><i class="far fa-heart"></i></button>
+      <button class="button is-medium m-3 grow icon-buttons" id = "recents-btn"><i class="fas fa-history"></i></button>
+      <button class="button is-medium m-3 grow icon-buttons" id = "favorites-btn"><i class="far fa-heart"></i></button>
     </section>
 
     <!-- weather data -->
@@ -138,7 +138,8 @@
           </div>
       </div>
 
-      <div class="modal">
+      <!-- modals -->
+      <div class="modal" id = "recents-modal">
         <div class="modal-background"></div>
         <div class="modal-card">
           <header class = "modal-card-head">
@@ -161,10 +162,10 @@
             </div>
           </section>
       </div>
-        <button class="modal-close is-large" aria-label="close"></button>
+        <button id = "close-recents" class="modal-close is-large" aria-label="close"></button>
       </div>
 
-      <div class="modal">
+      <div class="modal" id = "favorites-modal">
         <div class="modal-background"></div>
         <div class="modal-card">
           <header class = "modal-card-head">
@@ -187,7 +188,7 @@
             </div>
           </section>
       </div>
-        <button class="modal-close is-large" aria-label="close"></button>
+        <button id = "close-favs" class="modal-close is-large" aria-label="close"></button>
       </div>
     <!-- end of weather data-->
 
