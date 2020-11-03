@@ -12,9 +12,11 @@
 }
 
 .hero-image {
-  background-image: url("../images/kite-hero.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../images/kite-hero.jpg");
+  height: 50%;
   background-size: cover;
   background-position: 80%;
+  position: relative;
   background-attachment: fixed;
   display: flex;
   justify-content: center;
@@ -46,6 +48,7 @@
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
 }
 
+/* list styles (recent searches and favorites) */
 .section-headers {
   font-family: "Nunito";
   font-size: 30px;
@@ -53,7 +56,6 @@
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
 }
 
-/* list styles (recent searches and favorites) */
 .group-list {
   margin: 1rem 3rem;
   width: 20rem;
@@ -175,6 +177,11 @@
 
 /* requires modal */
 @media screen and (max-width: 980px) {
+
+  .hero-image {
+    height: 50px;
+  }
+  
   #mapContainer {
     width: 100%;
   }
@@ -248,5 +255,22 @@
   .group-list {
     margin: 1rem;
     width: 15rem;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .group-list {
+    width: 15rem;
+    margin-left: 40px;
+  }
+
+  .recent-searches {
+    margin-left: 3rem;
+  }
+
+  .input-field {
+    width: 30%;
+    height: 50px;
+    border-color: black;
   }
 }

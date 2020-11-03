@@ -6,25 +6,24 @@ $("#recents-btn").on("click", function () {
   recentsModal.addClass("is-active");
 });
 
-$("#close-recents").on("click", function () {
-  recentsModal.removeClass("is-active");
-});
 
 $("#favorites-btn").on("click", function () {
   favoritesModal.addClass("is-active");
+});
+
+
+// close modals 
+$("#close-recents").on("click", function () {
+  recentsModal.removeClass("is-active");
 });
 
 $("#close-favs").on("click", function () {
   favoritesModal.removeClass("is-active");
 });
 
-// Close modals on blur
-$("#recents-modal").on("blur", function () {
-  recentsModal.removeClass("is-active");
-  console.log("blur");
-});
-
-$("#favorites-modal").on("blur", function () {
-  recentsModal.removeClass("is-active");
-  console.log("blur");
-});
+window.addEventListener("click", function(event) {
+  if(event.target.className === "modal-background") {
+    recentsModal.removeClass("is-active");
+    favoritesModal.removeClass("is-active");
+  }
+})
