@@ -1,3 +1,4 @@
+"use strict";
 // make an arrray to hold all of the favorite
 var favorites = [null, null, null, null];
 
@@ -25,10 +26,9 @@ function addFavorite(theLocation, theName) {
   console.log(fav);
   //assign that object into favorites memory
   //this is a very inificient way of doing this. will be fixed with for loop
-  favorites[3] = favorites[2];
-  favorites[2] = favorites[1];
-  favorites[1] = favorites[0];
-  favorites[0] = fav;
+  favorites.unshift(fav);
+  favorites.splice(favorites.length - 1, 1);
+
   //Call method to update the display
   displayFavorites();
   saveFavorites();
@@ -86,11 +86,14 @@ $("#favorite-item-group").on("click", ".list-item", function () {
 function removeFavorite(theItemNum) {
   theItemNum = Number(theItemNum);
   // we are going to remove that item. And shift all items below it up by one
-  favorites[theItemNum - 1] = null;
-  for (var i = favorites.length - 1; i > theItemNum; i--) {
-    console.log("replacing", i, i - 1);
-    favorites[i] = favorites[i - 1];
-  }
+  // favorites[theItemNum - 1] = null;
+  // for (var i = favorites.length - 1; i > theItemNum; i--) {
+  //   console.log("replacing", i, i - 1);
+  //   favorites[i] = favorites[i - 1];
+  // }
+
+  favorites.splice(theItemNum - 1, 1);
+  favorites.push(null);
   saveFavorites();
 }
 
