@@ -27,7 +27,7 @@ function displayWeatherData(data) {
   $("#temp").text("Temperature: " + data.data[0].temp + " F");
   $("#rain").text("Rain: " + data.data[0].precip + " %");
   $("#wind").text(
-    "Wind Speed: " + data.data[0].wind_spd + " " + data.data[0].wind_cdir
+    "Wind Speed: " + data.data[0].wind_spd + "MPH  " + data.data[0].wind_cdir
   );
   $("#uv").text("UV: " + data.data[0].uv);
 }

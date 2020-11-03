@@ -34,17 +34,11 @@ function mapClickHandler(event) {
   clickMarker = new mapboxgl.Marker()
     .setLngLat([mouseLngLat.lng, mouseLngLat.lat])
     .addTo(map);
-  windFetch(mouseLngLat); // display call made in windFetch
+  //windFetch(mouseLngLat); // display call made in windFetch
 }
 function searchClickHandler(event) {
   event.preventDefault();
-  mapEl.textContent =
-    "Add the weather data here for (" +
-    mouseLngLat.lng +
-    ", " +
-    mouseLngLat.lng +
-    ")";
-  //Add weather data Here and go on with this
+  windFetch(mouseLngLat); // display call made in windFetch
 }
 mapEl = document.getElementById("mapContainer");
 mapEl.addEventListener("click", mapClickHandler);
