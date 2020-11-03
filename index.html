@@ -4,10 +4,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
   <!-- bulma stylesheet -->
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
+
+  <!-- fontawesome cdn -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
   <!-- custom google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="assets/css/style.css" />
   <title>Fly High</title>
   <!-- Loading in maps -->
@@ -36,25 +41,101 @@
     </div>
   </section>
   <!-- end of hero section -->
+
   <!-- Testing the map -->
-  <!-- Basic Text -->
+  <!-- recent searches, map, and favorites -->
   <section class="section has-text-centered">
-    <h2 class="subtitle has-text-black subtitle-font mt-5" id="map-text">
-      Pick Your Location
-    </h2>
-    <div class="map-tweaks">
-      <div id="mapContainer"></div>
+    <div class="columns">
+      <div class="column is-3">
+        <h2 class="subtitle has-text-black section-headers mt-6 mobile-text">
+          Recent Searches
+        </h2>
+        <div class="group-list">
+          <a href="#" class="list-item"></a>
+          <a href="#" class="list-item"></a>
+          <a href="#" class="list-item"></a>
+          <a href="#" class="list-item"></a>
+          <a href="#" class="list-item"></a>
+          <a href="#" class="list-item"></a>
+          <a href="#" class="list-item"></a>
+          <a href="#" class="list-item"></a>
+          <a href="#" class="list-item"></a>
+          <a href="#" class="list-item"></a>
+        </div>
+      </div>
+      <div class="column is-6">
+        <h2 class="subtitle has-text-black main-header mt-5 mobile-text" id="map-text">
+          Pick Your Location
+        </h2>
+        <div id="mapContainer"></div>
+      </div>
+      <div class="column is-3">
+        <h2 class="subtitle has-text-black section-headers mt-6 mobile-text">
+          Favorites
+        </h2>
+        <div>
+          <div class="group-list">
+            <a href="#" class="list-item"></a>
+            <a href="#" class="list-item"></a>
+            <a href="#" class="list-item"></a>
+            <a href="#" class="list-item"></a>
+            <a href="#" class="list-item"></a>
+            <a href="#" class="list-item"></a>
+            <a href="#" class="list-item"></a>
+            <a href="#" class="list-item"></a>
+            <a href="#" class="list-item"></a>
+            <a href="#" class="list-item"></a>
+          </div>
+        </div>
+      </div>
     </div>
+
     <!-- Add button to search using the data -->
-    <button class="button is-medium is-outlined mt-0" id="search-button">Let's Fly!</button>
+    <button class="button is-medium is-outlined mt-0 grow" id="search-button">
+      Let's Fly!
+    </button>
+    <button class="button is-medium is-outlined mt-0 grow" id="favorite-button">
+      Add To Favorites
+    </button>
+    <button class="button is-medium is-outlined mt-0" id="load-button">
+      Load Favorites
+    </button>
+    <button class="button is-medium is-outlined mt-0" id="fill-button">
+      Fill Favorites
+    </button>
+    <form>
+      <div class="field">
+        <div class="control">
+          <input type="textarea" id="place-name" />
+        </div>
+      </div>
+    </form>
   </section>
-  <script src="assets/js/script.js"></script>
 
-  <!-- Map Apis -->
+  <!-- weather data -->
+  <div class="container has-text-centered location-background mobile-text">
+    <h2 class="location-header">Location Status:</h2>
+    <!-- insert rating -->
+    <div class=columns>
+      <div class="column">
+        <h3 id="temp" class="p-4">Temperature:</h3>
+        <h3 id="wind" class="p-4">Wind Speed:</h3>
+      </div>
+      <div class="column">
+        <h3 id="rain" class="p-4">Rain:</h3>
+        <h3 id="uv" class="p-4">UV:</h3>
+      </div>
+    </div>
+    <!-- end of weather data-->
 
-  <script src="assets/js/mapsApiKey.js"></script>
-  <script src="assets/js/wind.js"></script>
-  <script src="assets/js/maps.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <!-- Map Apis -->
+    <script src="assets/js/wind.js"></script>
+    <script src="assets/js/favorites.js"></script>
+    <script src="assets/js/mapsApiKey.js"></script>
+    <script src="assets/js/maps.js"></script>
 </body>
 
 </html>
