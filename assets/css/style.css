@@ -118,6 +118,11 @@
 
 /* modal styles */
 
+.icon-buttons {
+  background-color: rgb(252, 246, 236);
+  border-color: black;
+  display: none;
+}
 
 .list-item-modal {
   height: 3rem;
@@ -162,6 +167,10 @@
     margin-left: 30px;
     width: 10rem;
   }
+
+  .icon-buttons {
+    display: inline;
+  }
 }
 
 /* requires modal */
@@ -187,6 +196,10 @@
     margin-right: 30px;
     width: 10rem;
   }
+
+  .icon-buttons {
+    display: inline;
+  }
 }
 
 /* requires modal */
@@ -206,6 +219,10 @@
   .group-list-modal {
     margin-right: 20px;
     width: 10rem;
+  }
+
+  .icon-buttons {
+    display: inline;
   }
 }
 
