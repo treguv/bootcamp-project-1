@@ -38,6 +38,7 @@ function mapClickHandler(event) {
 }
 function searchClickHandler(event) {
   event.preventDefault();
+  addRecent(mouseLngLat, $("#place-name").val());
   windFetch(mouseLngLat); // display call made in windFetch
 }
 mapEl = document.getElementById("mapContainer");
