@@ -1,3 +1,4 @@
+// toggle modals
 var recentsModal = $("#recents-modal");
 var favoritesModal = $("#favorites-modal");
 
