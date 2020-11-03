@@ -12,22 +12,28 @@
 }
 
 .hero-image {
-  background-image: url("../images/kite-hero.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../images/kite-hero.jpg");
+  height: 50%;
   background-size: cover;
   background-position: 80%;
+  position: relative;
   background-attachment: fixed;
   display: flex;
   justify-content: center;
 }
 /* end of hero styles */
 
+
 /* Map Style */
 #mapContainer {
-  width: 60%; /* Figure out how to change the size*/
+  max-width: 100%;
   height: 500px;
   margin: auto;
   margin-top: 2rem;
   margin-bottom: 3rem;
+  border-style: double;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px  rgba(0, 0, 0, 0.5);
 }
 
 #map-text {
@@ -35,13 +41,236 @@
   justify-content: center;
 }
 
-.map-tweaks {
+.main-header {
+  font-family: "Nunito";
+  font-size: 40px;
+  font-style: italic;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+/* list styles (recent searches and favorites) */
+.section-headers {
+  font-family: "Nunito";
+  font-size: 30px;
+  font-style: italic;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.group-list {
+  margin: 1rem 3rem;
+  width: 20rem;
+}
+
+.recent-searches {
+  margin: 1rem 4rem;
+  width: 20rem;
+}
+
+.list-item {
+  height: 3rem;
+  position: relative;
+  display: block; 
+  padding: .75rem 1.25rem;
+  margin-bottom: -1px;
+  background-color: rgb(240, 240, 240);
+  border: 1px solid rgba(0, 0, 0, 0.74);
+  border-radius: 2px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
 }
 
 
-/* Should be centered under the map */
- #search-button {
+/* button should be centered under the map */
+ .button-styles {
   background-color: rgba(63, 172, 245, 0.479);
   border-color: rgba(47, 108, 241, 0.63);
   font-family: "Nunito";
+}
+
+.grow:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  transition-duration: 500ms;
+}
+
+.input-field {
+  width: 20%;
+  border-color: black;
+}
+
+
+/* weather data */
+.location-background {
+  width: 50%;
+  font-size: 30px;
+  font-family: "Nunito";
+  background-color: rgba(148, 147, 147, 0.13);
+  border-radius: 5px;
+  border-style: double;
+}
+
+.location-header {
+  font-size: 40px;
+  font-weight: bold;
+  padding-top: 15px;
+  padding-bottom: 50px;
+}
+
+/* modal styles */
+
+.icon-buttons {
+  background-color: rgb(252, 246, 236);
+  border-color: black;
+  display: none;
+}
+
+.list-item-modal {
+  height: 3rem;
+  width: 20rem;
+  display: block;
+  padding: .75rem 1.25rem;
+  margin-bottom: -1px;
+  background-color: rgba(245, 236, 236, 0.849);
+  border: 1px solid rgba(0, 0, 0, 0.74);
+  border-radius: 2px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+}
+
+
+/* media queries */
+/* requires modal */
+@media screen and (max-width: 768px) {
+  #mapContainer {
+    max-width: 80%;
+  }
+ 
+  .mobile-text {
+    font-size: 2rem;
+  }
+
+  .location-background {
+    font-size: 30px;
+    width: 80%;
+  }
+
+  .location-header {
+    font-size: 30px;
+  }
+
+  .is-3 {
+    display: none;
+  }
+
+  .group-list-modal {
+    margin-left: 30px;
+    width: 10rem;
+  }
+
+  .icon-buttons {
+    display: inline;
+  }
+}
+
+/* requires modal */
+@media screen and (max-width: 980px) {
+
+  .hero-image {
+    height: 50px;
+  }
+  
+  #mapContainer {
+    width: 100%;
+  }
+
+  .location-background {
+    font-size: 30px;
+    width: 80%;
+  }
+
+  .is-3 {
+    display: none;
+  }
+
+  .is-mobile-10 {
+    width: 80% !important;
+  }
+
+  .group-list-modal {
+    margin-right: 30px;
+    width: 10rem;
+  }
+
+  .icon-buttons {
+    display: inline;
+  }
+}
+
+/* requires modal */
+@media screen and (max-width: 1024px) {
+  .hero-image {
+    height: 10rem;
+  }
+
+  .is-mobile-10 {
+    width: 80% !important;
+  }
+
+  .is-3 {
+    display: none;
+  }
+
+  .group-list-modal {
+    margin-right: 20px;
+    width: 10rem;
+  }
+
+  .icon-buttons {
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .hero-image {
+    height: 12rem;
+  }
+
+  .is-mobile-10 {
+    width: 50%;
+  }
+
+  .location-background {
+    font-size: 30px;
+    width: 70%;
+  }
+
+  .input-field {
+    width: 30%;
+    border-color: black;
+  }
+
+  .group-list {
+    margin: 1rem;
+    width: 15rem;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .group-list {
+    width: 15rem;
+    margin-left: 40px;
+  }
+
+  .recent-searches {
+    margin-left: 3rem;
+  }
+
+  .input-field {
+    width: 30%;
+    height: 50px;
+    border-color: black;
+  }
 }
