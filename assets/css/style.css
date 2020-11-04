@@ -48,6 +48,15 @@
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
 }
 
+.fading {
+  opacity: 0.7;
+  transition-duration: 500ms;
+}
+
+.fading:hover {
+  opacity: 1;
+}
+
 /* list styles (recent searches and favorites) */
 .section-headers {
   font-family: "Nunito";
@@ -57,13 +66,8 @@
 }
 
 .group-list {
-  margin: 1rem 3rem;
-  width: 20rem;
-}
-
-.recent-searches {
-  margin: 1rem 4rem;
-  width: 20rem;
+  margin: 1rem auto;
+  max-width: 80%;
 }
 
 .list-item {
@@ -87,12 +91,14 @@
   border-color: rgba(47, 108, 241, 0.63);
   font-family: "Nunito";
 }
+.grow {
+  transition-duration: 500ms;
+}
 
 .grow:hover {
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
-  transition-duration: 500ms;
 }
 
 .input-field {
@@ -128,7 +134,7 @@
 
 .list-item-modal {
   height: 3rem;
-  width: 20rem;
+  max-width: 100%;
   display: block;
   padding: .75rem 1.25rem;
   margin-bottom: -1px;
@@ -155,11 +161,14 @@
   }
 
   .modal-mobile {
-    width: 350px;
+    margin-left: .5rem !important;
+    margin-right: .5rem !important;
   }
 
   .group-list-modal {
-    margin-left: -9rem !important;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
   }
 }
 
@@ -184,11 +193,6 @@
 
   .is-3 {
     display: none;
-  }
-
-  .group-list-modal {
-    margin-left: 60px;
-    width: 10rem;
   }
 
   .icon-buttons {
@@ -220,11 +224,6 @@
     width: 80% !important;
   }
 
-  .group-list-modal {
-    margin-right: 30px;
-    width: 10rem;
-  }
-
   .icon-buttons {
     display: inline;
   }
@@ -242,10 +241,6 @@
 
   .is-3 {
     display: none;
-  }
-
-  .group-list-modal {
-    margin-right: 35px;
   }
 
   .icon-buttons {
@@ -271,23 +266,9 @@
     width: 30%;
     border-color: black;
   }
-
-  .group-list {
-    margin: 1rem;
-    width: 15rem;
-  }
 }
 
 @media screen and (max-width: 1440px) {
-  .group-list {
-    width: 15rem;
-    margin-left: 40px;
-  }
-
-  .recent-searches {
-    margin-left: 3rem;
-  }
-
   .input-field {
     width: 30%;
     height: 50px;
