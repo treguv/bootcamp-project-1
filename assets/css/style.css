@@ -29,8 +29,8 @@
   max-width: 100%;
   height: 500px;
   margin: auto;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
+  margin-top: auto;
+  margin-bottom: auto;
   border-style: double;
   border-radius: 5px;
   box-shadow: 2px 2px 2px  rgba(0, 0, 0, 0.5);
@@ -152,6 +152,19 @@
 @media screen and (max-width: 425px) {
   #mapContainer {
     max-width: 100% !important;
+    height: 350px;
+  }
+
+  .is-mobile-10 {
+    width: 100% !important;
+  }
+
+  .main-header {
+    font-size: 25px !important;
+  }
+
+  .map-section {
+    padding: 0px;
   }
 
   .input-field {
@@ -180,6 +193,10 @@
 @media screen and (max-width: 768px) {
   #mapContainer {
     max-width: 90% !important;
+  }
+
+  .map-section {
+    padding: 0px;
   }
  
   .mobile-text {
@@ -233,7 +250,7 @@
   }
 
   .is-mobile-10 {
-    width: 80% !important;
+    width: 90% !important;
   }
 
   .icon-buttons {
@@ -256,7 +273,7 @@
   }
 
   .is-mobile-10 {
-    width: 80% !important;
+    width: 90% !important;
   }
 
   .is-3 {
