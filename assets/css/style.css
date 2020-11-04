@@ -170,6 +170,10 @@
     margin-right: auto;
     max-width: 90%;
   }
+
+  .fading {
+    opacity: 1;
+  }
 }
 
 /* requires modal */
@@ -201,6 +205,10 @@
 
   .group-list-modal {
     max-width: 50%;
+  }
+
+  .fading {
+    opacity: 1;
   }
 }
 
@@ -235,6 +243,10 @@
   .group-list-modal {
     max-width: 70%;
   }
+
+  .fading {
+    opacity: 1;
+  }
 }
 
 /* requires modal */
@@ -257,6 +269,10 @@
 
   .group-list-modal {
     max-width: 70%;
+  }
+
+  .fading {
+    opacity: 1;
   }
 }
 
