@@ -142,10 +142,31 @@
 
 
 /* media queries */
+
+@media screen and (max-width: 425px) {
+  #mapContainer {
+    max-width: 100% !important;
+  }
+
+  .input-field {
+    width: 50% !important;
+    height: 50px;
+    border-color: black;
+  }
+
+  .modal-mobile {
+    width: 350px;
+  }
+
+  .group-list-modal {
+    margin-left: -9rem !important;
+  }
+}
+
 /* requires modal */
 @media screen and (max-width: 768px) {
   #mapContainer {
-    max-width: 80%;
+    max-width: 90% !important;
   }
  
   .mobile-text {
