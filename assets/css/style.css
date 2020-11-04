@@ -198,6 +198,10 @@
   .icon-buttons {
     display: inline;
   }
+
+  .group-list-modal {
+    max-width: 50%;
+  }
 }
 
 /* requires modal */
@@ -227,6 +231,10 @@
   .icon-buttons {
     display: inline;
   }
+
+  .group-list-modal {
+    max-width: 70%;
+  }
 }
 
 /* requires modal */
@@ -245,6 +253,10 @@
 
   .icon-buttons {
     display: inline;
+  }
+
+  .group-list-modal {
+    max-width: 70%;
   }
 }
 
