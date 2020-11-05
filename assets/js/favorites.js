@@ -234,7 +234,7 @@ $("#favorites-list").on("click", ".list-item", function () {
 });
 $("#modal-fav").on("click", ".list-item-modal", function () {
   var theClickedId = $(this).attr("id").replace("modfav-", "");
-  var theClickedItem = recent[Number(theClickedId)];
+  var theClickedItem = favorites[Number(theClickedId)];
   $("#favorites-modal").removeClass("is-active");
   map.flyTo({
     center: [theClickedItem.lng, theClickedItem.lat],
@@ -247,5 +247,5 @@ $("#modal-fav").on("click", ".list-item-modal", function () {
 //Listen for a click on on the favoites button
 $("#favorite-button").on("click", function () {
   addFavorite(mouseLngLat, $("#place-name").val());
-  $("#place-name").empty();
+  $("#place-name").val("");
 });

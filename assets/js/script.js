@@ -30,17 +30,17 @@ window.addEventListener("click", function (event) {
 
 // get user location
 var startCoords = [-122.335167, 47.608013];
-window.onload = async function () {
-  var startPos;
-  var geoSuccess = function (position) {
-    startPos = position;
-    startCoords = [startPos.coords.longitude, startPos.coords.latitude];
-    map = new mapboxgl.Map({
-      container: "mapContainer",
-      style: "mapbox://styles/mapbox/streets-v11",
-      center: startCoords, //Can be changed to users location
-      zoom: 10,
-    });
-  };
-  await navigator.geolocation.getCurrentPosition(geoSuccess);
-};
+// window.onload = async function () {
+//   var startPos;
+//   var geoSuccess = function (position) {
+//     startPos = position;
+//     startCoords = [startPos.coords.longitude, startPos.coords.latitude];
+//     map = new mapboxgl.Map({
+//       container: "mapContainer",
+//       style: "mapbox://styles/mapbox/streets-v11",
+//       center: startCoords, //Can be changed to users location
+//       zoom: 10,
+//     });
+//   };
+//   await navigator.geolocation.getCurrentPosition(geoSuccess);
+// };
