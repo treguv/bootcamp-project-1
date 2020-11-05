@@ -1,217 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
-    />
-    <!-- bulma stylesheet -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&display=swap"
-      rel="stylesheet"
-    />
-    <!-- custom google fonts -->
-    <script
-      src="https://kit.fontawesome.com/e8bd13e220.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- font awesome icons -->
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <title>Fly High</title>
-    <!-- Loading in maps -->
-    <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
-    <link
-      href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css"
-      rel="stylesheet"
-    />
-    <!-- More Map Loads -->
-    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
-    <!-- Promise polyfill script required to use Mapbox GL Geocoder in IE 11 -->
-    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
-  </head>
 
-  <body>
-    <!-- hero section -->
-    <section class="hero hero-image is-large">
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title has-text-white has-text-right header-font">
-            Fly High
-          </h1>
-          <h2 class="subtitle has-text-white has-text-right subtitle-font">
-            Find the perfect spot to take flight
-          </h2>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
+  <!-- bulma stylesheet -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&display=swap" rel="stylesheet" />
+  <!-- custom google fonts -->
+  <script src="https://kit.fontawesome.com/e8bd13e220.js" crossorigin="anonymous"></script>
+  <!-- font awesome icons -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>Fly High</title>
+  <!-- Loading in maps -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
+  <!-- More Map Loads -->
+  <script
+    src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
+  <!-- Promise polyfill script required to use Mapbox GL Geocoder in IE 11 -->
+  <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+</head>
+
+<body>
+  <!-- hero section -->
+  <section class="hero hero-image is-large">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title has-text-white has-text-right header-font">
+          Fly High
+        </h1>
+        <h2 class="subtitle has-text-white has-text-right subtitle-font">
+          Find the perfect spot to take flight
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- end of hero section -->
+
+  <!-- Testing the map -->
+  <!-- recent searches, map, and favorites -->
+  <section id="start" class="section has-text-centered map-section">
+    <div class="columns is-mobile is-centered">
+      <div class="column is-3">
+        <h2 class="subtitle has-text-black section-headers mt-6 mobile-text">
+          Recent Searches
+        </h2>
+        <div id="recent-list" class="group-list recent-searches">
+          <a href="#start" id="rec-0" class="list-item"></a>
+          <a href="#start" id="rec-1" class="list-item"></a>
+          <a href="#start" id="rec-2" class="list-item"></a>
+          <a href="#start" id="rec-3" class="list-item"></a>
+          <a href="#start" id="rec-4" class="list-item"></a>
+          <a href="#start" id="rec-5" class="list-item"></a>
+          <a href="#start" id="rec-6" class="list-item"></a>
+          <a href="#start" id="rec-7" class="list-item"></a>
+          <a href="#start" id="rec-8" class="list-item"></a>
+          <a href="#start" id="rec-9" class="list-item"></a>
         </div>
       </div>
-    </section>
-    <!-- end of hero section -->
-
-    <!-- Testing the map -->
-    <!-- recent searches, map, and favorites -->
-    <section class="section has-text-centered map-section">
-      <div class="columns is-mobile is-centered">
-        <div class="column is-3">
-          <h2 class="subtitle has-text-black section-headers mt-6 mobile-text">
-            Recent Searches
-          </h2>
-            <div class="group-list recent-searches">
-              <a href="#" class="list-item"></a>
-              <a href="#" class="list-item"></a>
-              <a href="#" class="list-item"></a>
-              <a href="#" class="list-item"></a>
-              <a href="#" class="list-item"></a>
-              <a href="#" class="list-item"></a>
-              <a href="#" class="list-item"></a>
-              <a href="#" class="list-item"></a>
-              <a href="#" class="list-item"></a>
-              <a href="#" class="list-item"></a>
-            </div>
-        </div>
-        <div class="column is-6 is-mobile-10">
-          <h2
-            class="subtitle has-text-black main-header mt-5 mobile-text"
-            id="map-text"
-          >
-            Pick Your Location
-          </h2>
-          <div id="mapContainer" class = "fading"></div>
-        </div>
-        <div class="column is-3">
-          <h2 class="subtitle has-text-black section-headers mt-6 mobile-text">
-            Favorites
-          </h2>
-            <div class="group-list" id="favorites-list">
-              <a href="#" class="list-item" id="item-1"></a>
-              <a href="#" class="list-item" id="item-2"></a>
-              <a href="#" class="list-item" id="item-3"></a>
-              <a href="#" class="list-item" id="item-4"></a>
-              <a href="#" class="list-item" id="item-5"></a>
-              <a href="#" class="list-item" id="item-6"></a>
-              <a href="#" class="list-item" id="item-7"></a>
-              <a href="#" class="list-item" id="item-8"></a>
-              <a href="#" class="list-item" id="item-9"></a>
-              <a href="#" class="list-item" id="item-10"></a>
-            </div>
+      <div class="column is-6 is-mobile-10">
+        <h2 class="subtitle has-text-black main-header mt-5 mobile-text" id="map-text">
+          Pick Your Location
+        </h2>
+        <div id="mapContainer" class="fading"></div>
+      </div>
+      <div class="column is-3">
+        <h2 class="subtitle has-text-black section-headers mt-6 mobile-text">
+          Favorites
+        </h2>
+        <div id="favorites-list" class="group-list">
+          <a href="#start" id="fav-0" class="list-item"></a>
+          <a href="#start" id="fav-1" class="list-item"></a>
+          <a href="#start" id="fav-2" class="list-item"></a>
+          <a href="#start" id="fav-3" class="list-item"></a>
+          <a href="#start" id="fav-4" class="list-item"></a>
+          <a href="#start" id="fav-5" class="list-item"></a>
+          <a href="#start" id="fav-6" class="list-item"></a>
+          <a href="#start" id="fav-7" class="list-item"></a>
+          <a href="#start" id="fav-8" class="list-item"></a>
+          <a href="#start" id="fav-9" class="list-item"></a>
         </div>
       </div>
+    </div>
 
-      <!-- Add button to search using the data -->
-      <button
-        class="button is-medium is-outlined m-3 grow button-styles"
-        id="search-button"
-      >
-        Let's Fly!
-      </button>
-      <button
-        class="button is-medium is-outlined m-3 grow button-styles"
-        id="favorite-button"
-      >
+    <!-- Add button to search using the data -->
+    <!-- <button class="button is-medium is-outlined m-3 grow button-styles" id="search-button">
+      Let's Fly!
+    </button> -->
+    <form>
+      <div class="field">
+        <div class="control mt-4">
+          <input class="input input-field" type="textarea" id="place-name" placeholder="Name this spot" />
+        </div>
+      </div>
+      <button class="button is-medium is-outlined m-3 grow button-styles" id="favorite-button">
         Add To Favorites
       </button>
-      <!-- <button class="button is-medium is-outlined m-3 grow button-styles" id="load-button">
+    </form>
+
+    <!-- <button class="button is-medium is-outlined m-3 grow button-styles" id="load-button">
         Load Favorites
       </button>
       <button class="button is-medium is-outlined m-3 grow button-styles" id="fill-button">
         Fill Favorites
       </button> -->
-      <form>
-        <div class="field">
-          <div class="control mt-4">
-            <input class="input input-field" type="textarea" id="place-name" placeholder="Name this spot"/>
-          </div>
-        </div>
-      </form>
-      <button class="button is-medium m-3 grow icon-buttons" id="recents-btn">
-        <i class="fas fa-history"></i>
-      </button>
-      <button class="button is-medium m-3 grow icon-buttons" id="favorites-btn">
-        <i class="far fa-heart"></i>
-      </button>
-    </section>
 
-    <!-- weather data -->
-    <div class="container has-text-centered location-background mobile-text">
-      <h2 class="location-header">Location Status:</h2>
-      <!-- insert rating -->
-      <div class="columns">
-        <div class="column">
-          <h3 class="p-4" id="temp">Temperature:</h3>
-          <h3 class="p-4" id="wind">Wind Speed:</h3>
-        </div>
-        <div class="column">
-          <h3 class="p-4" id="rain">Rain:</h3>
-          <h3 class="p-4" id="uv">UV:</h3>
-        </div>
+    <button class="button is-medium m-3 grow icon-buttons" id="recents-btn">
+      <i class="fas fa-history"></i>
+    </button>
+    <button class="button is-medium m-3 grow icon-buttons" id="favorites-btn">
+      <i class="far fa-heart"></i>
+    </button>
+  </section>
+
+  <!-- weather data -->
+  <div class="container has-text-centered location-background mobile-text">
+    <h2 class="location-header">Location Status:</h2>
+    <!-- insert rating -->
+    <div class="columns">
+      <div class="column">
+        <h3 class="p-4" id="temp">Temperature:</h3>
+        <h3 class="p-4" id="wind">Wind:</h3>
+      </div>
+      <div class="column">
+        <h3 class="p-4" id="rain">Rain:</h3>
+        <h3 class="p-4" id="uv">UV:</h3>
       </div>
     </div>
-    <!-- modals -->
-    <div class="modal" id="recents-modal">
-      <div class="modal-background"></div>
-      <div class="modal-card modal-mobile">
-        <header class="modal-card-head has-text-centered">
-          <p class="modal-card-title">Recent Searches</p>
-        </header>
-        <section class="modal-card-body columns is-mobile is-centered">
-          <div class="group-list-modal column">
-            <a href="#" class="list-item-modal"></a>
-            <a href="#" class="list-item-modal"></a>
-            <a href="#" class="list-item-modal"></a>
-            <a href="#" class="list-item-modal"></a>
-            <a href="#" class="list-item-modal"></a>
-            <a href="#" class="list-item-modal"></a>
-            <a href="#" class="list-item-modal"></a>
-            <a href="#" class="list-item-modal"></a>
-            <a href="#" class="list-item-modal"></a>
-            <a href="#" class="list-item-modal"></a>
-          </div>
-        </section>
-        <button
-          id="close-recents"
-          class="modal-close is-large"
-          aria-label="close"
-        ></button>
-      </div>
+  </div>
+  <!-- modals -->
+  <div class="modal" id="recents-modal">
+    <div class="modal-background"></div>
+    <div class="modal-card modal-mobile">
+      <header class="modal-card-head has-text-centered">
+        <p class="modal-card-title">Recent Searches</p>
+      </header>
+      <section class="modal-card-body columns is-mobile is-centered">
+        <div id="modal-rec" class="group-list-modal column">
+          <a href="#start" id="modrec-0" class="list-item-modal"></a>
+          <a href="#start" id="modrec-1" class="list-item-modal"></a>
+          <a href="#start" id="modrec-2" class="list-item-modal"></a>
+          <a href="#start" id="modrec-3" class="list-item-modal"></a>
+          <a href="#start" id="modrec-4" class="list-item-modal"></a>
+          <a href="#start" id="modrec-5" class="list-item-modal"></a>
+          <a href="#start" id="modrec-6" class="list-item-modal"></a>
+          <a href="#start" id="modrec-7" class="list-item-modal"></a>
+          <a href="#start" id="modrec-8" class="list-item-modal"></a>
+          <a href="#start" id="modrec-9" class="list-item-modal"></a>
+        </div>
+      </section>
+      <button id="close-recents" class="modal-close is-large" aria-label="close"></button>
     </div>
+  </div>
 
-    <div class="modal" id="favorites-modal">
-      <div class="modal-background"></div>
-      <div class="modal-card modal-mobile">
-        <header class="modal-card-head has-text-centered">
-          <p class="modal-card-title">Favorites</p>
-        </header>
-        <section class="modal-card-body columns is-mobile is-centered">
-          <div class="group-list-modal column is-half">
-            <a href="#" class="list-item-modal"></a>
-            <a href="#" class="list-item-modal"></a>
-            <a href="#" class="list-item-modal"></a>
-            <a href="#" class="list-item-modal"></a>
-            <a href="#" class="list-item-modal"></a>
-            <a href="#" class="list-item-modal"></a>
-            <a href="#" class="list-item-modal"></a>
-            <a href="#" class="list-item-modal"></a>
-            <a href="#" class="list-item-modal"></a>
-            <a href="#" class="list-item-modal"></a>
-          </div>
-        </section>
-      </div>
-      <button
-        id="close-favs"
-        class="modal-close is-large"
-        aria-label="close"
-      ></button>
+  <div class="modal" id="favorites-modal">
+    <div class="modal-background"></div>
+    <div class="modal-card modal-mobile">
+      <header class="modal-card-head has-text-centered">
+        <p class="modal-card-title">Favorites</p>
+      </header>
+      <section class="modal-card-body columns is-mobile is-centered">
+        <div id="modal-fav" class="group-list-modal column is-half">
+          <a href="#start" id="modfav-0" class="list-item-modal"></a>
+          <a href="#start" id="modfav-1" class="list-item-modal"></a>
+          <a href="#start" id="modfav-2" class="list-item-modal"></a>
+          <a href="#start" id="modfav-3" class="list-item-modal"></a>
+          <a href="#start" id="modfav-4" class="list-item-modal"></a>
+          <a href="#start" id="modfav-5" class="list-item-modal"></a>
+          <a href="#start" id="modfav-6" class="list-item-modal"></a>
+          <a href="#start" id="modfav-7" class="list-item-modal"></a>
+          <a href="#start" id="modfav-8" class="list-item-modal"></a>
+          <a href="#start" id="modfav-9" class="list-item-modal"></a>
+        </div>
+      </section>
     </div>
-    <!-- end of weather data-->
+    <button id="close-favs" class="modal-close is-large" aria-label="close"></button>
+  </div>
+  <!-- end of weather data-->
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="assets/js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="assets/js/script.js"></script>
 
-    <!-- Map Apis -->
-    <script src="assets/js/wind.js"></script>
-    <script src="assets/js/favorites.js"></script>
-    <script src="assets/js/mapsApiKey.js"></script>
-    <script src="assets/js/maps.js"></script>
-  </body>
+  <!-- Map Apis -->
+  <script src="assets/js/wind.js"></script>
+  <script src="assets/js/favorites.js"></script>
+  <script src="assets/js/mapsApiKey.js"></script>
+  <script src="assets/js/maps.js"></script>
+</body>
+
 </html>

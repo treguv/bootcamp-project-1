@@ -1,3 +1,7 @@
+body {
+  margin-bottom: 50px;
+}
+
 /* hero styles */
 .header-font {
   font-family: "Nunito";
@@ -121,7 +125,7 @@
   font-size: 40px;
   font-weight: bold;
   padding-top: 15px;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
 }
 
 /* modal styles */
@@ -145,7 +149,6 @@
   text-decoration: none;
   color: black;
 }
-
 
 /* media queries */
 

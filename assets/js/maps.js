@@ -19,7 +19,7 @@ map.addControl(
 
 //add lat long tracking to the mouse
 var mouseLngLat;
-map.on("mousemove", function (e) {
+map.on("click", function (e) {
   // e.lngLat is the longitude, latitude geographical position of the event
   // document.getElementById("map-text").textContent = JSON.stringify(
   //   e.lngLat.wrap()
@@ -34,17 +34,18 @@ function mapClickHandler(event) {
   clickMarker = new mapboxgl.Marker()
     .setLngLat([mouseLngLat.lng, mouseLngLat.lat])
     .addTo(map);
-  //windFetch(mouseLngLat); // display call made in windFetch
-}
-function searchClickHandler(event) {
-  event.preventDefault();
   windFetch(mouseLngLat); // display call made in windFetch
+  addRecent(mouseLngLat);
 }
+// function searchClickHandler(event) {
+//   event.preventDefault();
+//   windFetch(mouseLngLat); // display call made in windFetch
+// }
 mapEl = document.getElementById("mapContainer");
 mapEl.addEventListener("click", mapClickHandler);
 // Add listener to button
-searchButtonEl = document.getElementById("search-button");
-searchButtonEl.addEventListener("click", searchClickHandler);
+// searchButtonEl = document.getElementById("search-button");
+// searchButtonEl.addEventListener("click", searchClickHandler);
 
 //load the favorites back onto the map
 loadFavoritesOntoMap();
