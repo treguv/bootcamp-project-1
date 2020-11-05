@@ -212,6 +212,7 @@ function addFavorite(location, name) {
   };
   localStorage.setItem("favorites", JSON.stringify(favorites));
   loadFavorites();
+  loadFavoritesOntoMap()
 };
 
 loadFavorites();
