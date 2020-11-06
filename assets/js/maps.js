@@ -2,7 +2,7 @@ mapboxgl.accessToken = apiKey;
 var map = new mapboxgl.Map({
   container: "mapContainer",
   style: "mapbox://styles/mapbox/streets-v11",
-  center: [-122.335167, 47.608013], //Can be changed to users location
+  center: startCoords, //Can be changed to users location
   zoom: 10,
 });
 
@@ -19,7 +19,7 @@ map.addControl(
 
 //add lat long tracking to the mouse
 var mouseLngLat;
-map.on("mousemove", function (e) {
+map.on("click", function (e) {
   // e.lngLat is the longitude, latitude geographical position of the event
   // document.getElementById("map-text").textContent = JSON.stringify(
   //   e.lngLat.wrap()
@@ -34,23 +34,18 @@ function mapClickHandler(event) {
   clickMarker = new mapboxgl.Marker()
     .setLngLat([mouseLngLat.lng, mouseLngLat.lat])
     .addTo(map);
-  windFetch(mouseLngLat);
+  windFetch(mouseLngLat); // display call made in windFetch
+  addRecent(mouseLngLat);
 }
-function searchClickHandler(event) {
-  event.preventDefault();
-  mapEl.textContent =
-    "Add the weather data here for (" +
-    mouseLngLat.lng +
-    ", " +
-    mouseLngLat.lng +
-    ")";
-  //Add weather data Here and go on with this
-}
+// function searchClickHandler(event) {
+//   event.preventDefault();
+//   windFetch(mouseLngLat); // display call made in windFetch
+// }
 mapEl = document.getElementById("mapContainer");
 mapEl.addEventListener("click", mapClickHandler);
 // Add listener to button
-searchButtonEl = document.getElementById("search-button");
-searchButtonEl.addEventListener("click", searchClickHandler);
+// searchButtonEl = document.getElementById("search-button");
+// searchButtonEl.addEventListener("click", searchClickHandler);
 
 //load the favorites back onto the map
 loadFavoritesOntoMap();
