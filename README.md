@@ -1,7 +1,7 @@
 # Fly High
 
 ## Purpose
-The purpose of this webpage is to provide the weather for the current day and a 5 day forecast for the city the user searches for. The website also keeps track of the search history allowing the user to click on their previous searches to retrieve the weather for that city again.
+The purpose of this webpage is to provide the current weather conditions for kite flyers to help them determine if they should go kite flying or not. It also keeps track of their recent searches, while also providing the ability to save their favorite locations and easily come back to them. 
 
 ## Note
 We understand that deploying the application with exposed API keys is bad practice. However, due to the fact that at this time we do not have access to any back-end to host the keys we have no alternative to deploying them in the webpage.
@@ -22,4 +22,4 @@ Stephen Beiter
 Vladislav Tregubov
 
 ## Image of Webpage
-![Image of webpage](/assets/img/web-screenshot-png.png) ADD IMAGE HERE
+![Image of webpage](/assets/images/application-screenshot.png) 
