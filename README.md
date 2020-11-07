@@ -22,4 +22,4 @@ Stephen Beiter
 Vladislav Tregubov
 
 ## Image of Webpage
-![Image of webpage](/assets/images/application-screenshot.png) ADD IMAGE HERE
+![Image of webpage](/assets/images/application-screenshot.png) 
