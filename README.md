@@ -15,7 +15,7 @@ We understand that deploying the application with exposed API keys is bad practi
 
 
 ## Website
-treguv.github.io/fly-high/
+https://treguv.github.io/fly-high/
 ## Made By
 Melissa Barrera
 Stephen Beiter
